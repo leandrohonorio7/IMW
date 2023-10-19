@@ -1,0 +1,894 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Automation_PAE" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1301,3343" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Files.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Files.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>Automation_IMW.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Automation_PAE" sap:VirtualizedContainerService.HintSize="780,3278" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: PAE 2022 - Login" sap:VirtualizedContainerService.HintSize="718,3167" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsCVEnabled="False" OpenMode="IfNotOpen" ScopeGuid="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="684,2950" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable">
+                <Variable.Default>
+                  <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">new System.Data.DataTable();</CSharpValue>
+                </Variable.Default>
+              </Variable>
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Sequence Login" sap:VirtualizedContainerService.HintSize="622,81" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NSetText DisplayName="Set Text 'CPF'" sap:VirtualizedContainerService.HintSize="388,162" sap2010:WorkflowViewState.IdRef="NSetText_1" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Text="14107717763" Version="V3">
+                <uix:NSetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/login/" CvElementArea="779, 552, 382, 34" CvTextArea="782, 562, 26, 12" CvTextArgument="CPF" CvType="InputBox" DesignTimeRectangle="783, 551, 378, 35" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="cca400c8-1367-41c8-a2d0-60547b39c887" InformativeScreenshot="2d9417a4b5b898e6c2d39474a8622561.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NSetText.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NSetText>
+              <uix:NSetText DisplayName="Set Text 'Senha'" sap:VirtualizedContainerService.HintSize="388,162" sap2010:WorkflowViewState.IdRef="NSetText_2" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Text="sec14107" Version="V3">
+                <uix:NSetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/login/" CvElementArea="780, 609, 382, 32" CvTextArea="782, 617, 38, 12" CvTextArgument="Senha" CvType="InputBox" DesignTimeRectangle="783, 606, 378, 35" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control' aaname='' /&gt;" Guid="b771aa8c-5a4f-438f-94b7-c8a693759e57" InformativeScreenshot="3f753ed3cdebe48f35c83af8669d227a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - Login' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
+                </uix:NSetText.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NSetText>
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'A sign-in'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/login/" CvElementArea="1188, 580, 56, 54" CvType="Icon" DesignTimeRectangle="1191, 581, 50, 50" DesignTimeScaleFactor="1" FriendlyName="'A sign-in'" FullSelectorArgument="&lt;webctrl id='sign-in' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='sign-in' tag='A' type='' class='btn btn-login btn-success btn-float waves-effect waves-circle waves-float' aaname='' /&gt;" Guid="94a95e31-6256-4345-b90a-b2de5d6aa1b6" InformativeScreenshot="57f8356730b39c036dae279ae27afaff.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - Login' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+            </Sequence>
+            <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="622,52" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://pae.wesleyana.com.br/membresia/membros/" Version="V3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGoToUrl>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='ROL' ReferenceName='ROL' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='NOME' ReferenceName='NOME' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='RECEPÇÃO' ReferenceName='RECEPÇÃO' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='EXCLUSÃO' ReferenceName='EXCLUSÃO' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='CONGREGAÇÃO' ReferenceName='CONGREGAÇÃO' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='#' ReferenceName='#' ReferenceIdx='5'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='ID' ReferenceName='ID' ReferenceIdx='6'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='AÇÕES' ReferenceName='AÇÕES' ReferenceIdx='7'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='ROL' attr='fulltext' /&gt;&lt;column name='NOME' attr='fulltext' /&gt;&lt;column name='RECEPÇÃO' attr='fulltext' /&gt;&lt;column name='EXCLUSÃO' attr='fulltext' /&gt;&lt;column name='CONGREGAÇÃO' attr='fulltext' /&gt;&lt;column name='#' attr='fulltext' /&gt;&lt;column name='ID' attr='fulltext' /&gt;&lt;column name='AÇÕES' attr='fulltext' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="622,52" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+              <uix:NExtractData.DataTable>
+                <InOutArgument x:TypeArguments="sd:DataTable">
+                  <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">ExtractDataTable</CSharpReference>
+                </InOutArgument>
+              </uix:NExtractData.DataTable>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="306, 357, 1575, 2861" DesignTimeScaleFactor="1" FriendlyName="'ROLNomeRecepçãoExclusão…'" FullSelectorArgument="&lt;webctrl id='data-table-command' tag='TABLE' /&gt;" Guid="4e128fb2-a33a-4352-aad5-7afcf922feb3" InformativeScreenshot="2fa9f0a4c9c8ae5ffaee51a7240d4138.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" AutoSave="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="622,2530" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" WorkbookPath="arquivos\\Extracao_paes.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="588,2261" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="ValorTela">
+                        <Variable.Default>
+                          <Literal x:TypeArguments="x:String" Value="" />
+                        </Variable.Default>
+                      </Variable>
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="572,2532" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="538,2346" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGoToUrl DelayAfter="3" DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="496,82" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Version="V3">
+                              <uix:NGoToUrl.Url>
+                                <InArgument x:TypeArguments="x:String">
+                                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">"https://pae.wesleyana.com.br/membresia/membros/" + CurrentRow.ItemArray.FirstOrDefault().ToString()</CSharpValue>
+                                </InArgument>
+                              </uix:NGoToUrl.Url>
+                            </uix:NGoToUrl>
+                            <ueab:WriteCellX AutoIncrementRow="True" DisplayName="A - Write Cell" sap:VirtualizedContainerService.HintSize="496,52" sap2010:WorkflowViewState.IdRef="WriteCellX_1">
+                              <ueab:WriteCellX.Cell>
+                                <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                  <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">Excel.Sheet["Plan1"].Cell["A2"]</CSharpValue>
+                                </InArgument>
+                              </ueab:WriteCellX.Cell>
+                              <ueab:WriteCellX.Value>
+                                <InArgument x:TypeArguments="x:Object">
+                                  <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">DateTime.Now.ToString()</CSharpValue>
+                                </InArgument>
+                              </ueab:WriteCellX.Value>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ueab:WriteCellX>
+                            <Sequence DisplayName="B - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Nome'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/22621cfa-e250-43bc-9999-80dc060b1e4d" DesignTimeRectangle="594, 384, 624, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'ADILSON FREITAS'" FullSelectorArgument="&lt;webctrl id='id_nome' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='id_nome' tag='INPUT' type='text' class=' form-control input-sm input-mask ' aaname='              Nome                                            ' /&gt;" Guid="14c8675a-278a-44c5-9392-a2f5372f767c" InformativeScreenshot="e660a47bcf9ab546cc7e12a9e50d56a3.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="594, 360, 35, 19" ElementType="Text" FriendlyName="'Nome'" FullSelectorArgument="&lt;webctrl aaname='              Nome                                            ' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Nome                                            ' parentid='pessoais' tag='LABEL' type='' class='control-label is-required' check:innerText='Nome' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="B - Write Cell" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="WriteCellX_2">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">Excel.Sheet["Plan1"].Cell["B2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">ValorTela</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="E - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Atividades Ignoradas" sap:VirtualizedContainerService.HintSize="450,318" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NGetAttributeGeneric x:TypeArguments="x:String" Attribute="text" DisplayName="Get Attribute 'Masculino'" sap:VirtualizedContainerService.HintSize="388,207" sap2010:WorkflowViewState.IdRef="NGetAttributeGeneric`1_1" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                      <uix:NGetAttributeGeneric.Result>
+                                        <OutArgument x:TypeArguments="x:String">
+                                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">ValorTela</CSharpReference>
+                                        </OutArgument>
+                                      </uix:NGetAttributeGeneric.Result>
+                                      <uix:NGetAttributeGeneric.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/22621cfa-e250-43bc-9999-80dc060b1e4d" DesignTimeRectangle="1248, 390, 188, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Masculino'" FullSelectorArgument="&lt;webctrl parentid='pessoais' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pessoais' tag='SPAN' type='' class='filter-option pull-left' aaname='*' /&gt;" Guid="b6534d3f-2718-46ac-891d-fa45e4785f05" InformativeScreenshot="28bc49a3cc59b5e704ed4a4e88f26251.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                              <uix:Target CvTextArea="1247, 362, 30, 13" CvTextArgument="Sexo" CvType="Text" DesignTimeRectangle="1248, 360, 29, 19" ElementType="Text" FriendlyName="'Sexo'" FullSelectorArgument="&lt;webctrl aaname='              Sexo                                            ' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Sexo                                            ' parentid='pessoais' tag='LABEL' type='' class='control-label is-required' check:innerText='Sexo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAXCAYAAACFxybfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH+SURBVEhL7VRNS8NAEPWX5hKQQAkUPBhEEUPBHiyCB3vKJSLpoQc9WEqLKCIFUaRFIkilCBIpEaGXUAiB58x+NLaeeih6yINAdnZ25+17s7uGf4CChEZBQuP/kUhG1/D2bZiGAcMwYW3V0R0lanZ1yElMeqiZVHyvhSijcZYiunCJjIPWh0xZFXISTz4VNLDTjlUgRzpN1d9qkJP47MJlG8pH6L5OVHABH9eob5qCrFlyEQxkXtxmxQy4HT5AhNYW2+miNaZhNkH/tAp7XVlcCdD/EstmmOuJ+LKq+kEW8W7ekLA1jGkIvyTtiikWnliUp6zKIpxz4RIVGPiwaL3dGIplw4Yt8pojzntDk/PKAYZ6X8IcCYHPPpqHTk6m0hVF07u6GNduVaMq+9xLqUb67MOmk5rcV2Uf4ZSjRJzH20RcZLFqO7TOhP+sAoTfJDRSkrXC0puoP6SIO1LyxU9awNA2GHAuIhUjEpy3RwdREb1P9Sq3fEZi2GB5N3D+rgIMfVoqlNzWxP9MiQUkA49sICXWiXjJQ1+kLavEa0ByGrCOe0J+ZAnChiMWsBI/e0Jf4fgplLk8V6Y56onwRe5jn4TgO7V0T8w/VtQPdhXBoz4DYXwPr2LNHjN718M9dXp0xmRJ4huWeILeAdvoSFWXvR1/hYKERkFCoyAhAXwDbYANMNQCSAUAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, CV" />
+                                              <uix:Target CvTextArea="1465, 362, 102, 13" CvTextArgument="Data Nascimento" CvType="Text" DesignTimeRectangle="1466, 360, 101, 19" ElementType="Text" FriendlyName="'Data Nascimento'" FullSelectorArgument="&lt;webctrl aaname='              Data Nascimento                                   *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Data Nascimento                                   *' parentid='pessoais' tag='LABEL' type='' class='control-label is-required' check:innerText='Data Nascimento' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAAXCAYAAAAIqmGLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQTSURBVGhD7Vf/ZyNBFL+/dH9ZKkSoi3NRV6dRLk7jND80TuVUzglnj8a5qK7SHyJV4eRUSoUKJ1VbJcoqFT733puZzddt09wX3bMfhp15M2/evM97b2afIcaTR0xSBBCTFAHEJEUAMUkRQExSBDAk6aQMy7KGzU4gs+Wie6PlfwtXLrK8X7KM9q0eI3j7WbGjfKIH/jT0ebP7nh54upgiKTD6povqug1rmZznq6G/AkMStcxuTw/+A5IihHCSGGcVJNh534bOC0N7hx2dhXulB+bFCEmWnUejr4b/S5LMWXfaemA+3E/SbRNFVrrRgCST30H1XQY2j1k2Um8cdEigCBo241jvuIRskrKRxuxkBsX6jNJiDN8somhbSNAB7mh4iqTLJkrrCbW3lOIGvIES+WdV5F+qfaylFHKfWugHMge5lLEhi9KxtmHsvG2Uee2LIspb+nxLZO/+IRy9p/28gMalWoqBj/aXLBJkL/tBrgVx0LQe3tM5I+FoMHJbcyGW+F24NHda1xD3k2Q2FYU+Gpt82BzcaxL9rCJDMvt9U5w6lUnnDlIkT3zkqPHR3OK1GdQulDjASHQpYtSccZK6cJZpDt9b5Hz/uCgOkAznQOIDblIgsaxekHX5unYME7/dkiDz9ob6Z5JkERF8B980UOC+XRzv62BVtiVQ+kG9axc5kik/aD3JElp6ndhmCJnKpD4aG+SXkX14vk376IIieARJkxiXPVTuQsvXqOGDDipEhr3VRDdsPmNsDdnBjlguoHbSg88Ro+Htrc7WwVk2kyQKApkQ0k9W0EEP1Rfmm+HBXaO+zXPHfRLIjJ5Jkohg6VMQGbS2eT75kRNBY75yt+4Ks1JWVnTJMS2MpIGH5occUksjc6ndSxJBZUkK+Y1xB3PpNGUraGYNlTRTVlXJUKXw3sBZhCTpm+/JtgBJk32CstlG5UwPEOZ/OJiyoktOYHgISb1vGdGXO1CJO1cmMQYUqSusSzWZf1GT0mq9pWDhvWccjnF31cXh+5Ssy9K+oZnEWJgkyvYkfQeZNIpHkvTbmTT5BDdZpR3l/yjLnWMMUg5JBBHQ201Lv3xKHXJ8jXXR/AdJItyRLRwcwXy6/9L0re430k13i2Qzr+kfyp2Q/twVGU7VWiZJdFNgmTupf5AjnSk459RZmCQTcHQnfWethH4H7XP+foCkQQsllr891HfOgndS0Gb8zHr1IjJcvuw0CvUWamIAXZIc3X4bFf3CKhyRwfQSDF5Grx20j8ryvbqng8BgZlZo42lckeqjY15TS6twThvqHnpVE2f4p8MX3G+97uYkSez5mle+EL1p5L52hw+HMJJ45CCvzrHs0HOI8KjXXYwni5ikCCAmKQKISYoAYpIigJikCCAm6ckD+AWvK+p4TZNhbAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NGetAttributeGeneric.Target>
+                                    </uix:NGetAttributeGeneric>
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:CommentOut>
+                              <uix:NGetText DisplayName="Get Text 'Sexo'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NGetText_5" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/96e6a35f-7829-45bb-bbc8-7974ce356798" DesignTimeRectangle="1248, 384, 188, 32" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Feminino'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='btn dropdown-toggle btn-default' /&gt;" Guid="fcfcbc1a-6665-4786-8047-8f13fd3e5342" InformativeScreenshot="e5af665ad8b26d37297f78c3fedc1237.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
+                                        <uix:Target DesignTimeRectangle="1248, 360, 29, 19" ElementType="Text" FriendlyName="'Sexo'" FullSelectorArgument="&lt;webctrl aaname='              Sexo                                            ' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Sexo                                            ' parentid='pessoais' tag='LABEL' type='' class='control-label is-required' check:innerText='Sexo' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACEAAAAXCAYAAACFxybfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH+SURBVEhL7VRNS8NAEPWX5hKQQAkUPBhEEUPBHiyCB3vKJSLpoQc9WEqLKCIFUaRFIkilCBIpEaGXUAiB58x+NLaeeih6yINAdnZ25+17s7uGf4CChEZBQuP/kUhG1/D2bZiGAcMwYW3V0R0lanZ1yElMeqiZVHyvhSijcZYiunCJjIPWh0xZFXISTz4VNLDTjlUgRzpN1d9qkJP47MJlG8pH6L5OVHABH9eob5qCrFlyEQxkXtxmxQy4HT5AhNYW2+miNaZhNkH/tAp7XVlcCdD/EstmmOuJ+LKq+kEW8W7ekLA1jGkIvyTtiikWnliUp6zKIpxz4RIVGPiwaL3dGIplw4Yt8pojzntDk/PKAYZ6X8IcCYHPPpqHTk6m0hVF07u6GNduVaMq+9xLqUb67MOmk5rcV2Uf4ZSjRJzH20RcZLFqO7TOhP+sAoTfJDRSkrXC0puoP6SIO1LyxU9awNA2GHAuIhUjEpy3RwdREb1P9Sq3fEZi2GB5N3D+rgIMfVoqlNzWxP9MiQUkA49sICXWiXjJQ1+kLavEa0ByGrCOe0J+ZAnChiMWsBI/e0Jf4fgplLk8V6Y56onwRe5jn4TgO7V0T8w/VtQPdhXBoz4DYXwPr2LNHjN718M9dXp0xmRJ4huWeILeAdvoSFWXvR1/hYKERkFCoyAhAXwDbYANMNQCSAUAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                        <uix:Target DesignTimeRectangle="1466, 360, 101, 19" ElementType="Text" FriendlyName="'Data Nascimento'" FullSelectorArgument="&lt;webctrl aaname='              Data Nascimento                                   *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Data Nascimento                                   *' parentid='pessoais' tag='LABEL' type='' class='control-label is-required' check:innerText='Data Nascimento' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGkAAAAXCAYAAAAIqmGLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQTSURBVGhD7Vf/ZyNBFL+/dH9ZKkSoi3NRV6dRLk7jND80TuVUzglnj8a5qK7SHyJV4eRUSoUKJ1VbJcoqFT733puZzddt09wX3bMfhp15M2/evM97b2afIcaTR0xSBBCTFAHEJEUAMUkRQExSBDAk6aQMy7KGzU4gs+Wie6PlfwtXLrK8X7KM9q0eI3j7WbGjfKIH/jT0ebP7nh54upgiKTD6povqug1rmZznq6G/AkMStcxuTw/+A5IihHCSGGcVJNh534bOC0N7hx2dhXulB+bFCEmWnUejr4b/S5LMWXfaemA+3E/SbRNFVrrRgCST30H1XQY2j1k2Um8cdEigCBo241jvuIRskrKRxuxkBsX6jNJiDN8somhbSNAB7mh4iqTLJkrrCbW3lOIGvIES+WdV5F+qfaylFHKfWugHMge5lLEhi9KxtmHsvG2Uee2LIspb+nxLZO/+IRy9p/28gMalWoqBj/aXLBJkL/tBrgVx0LQe3tM5I+FoMHJbcyGW+F24NHda1xD3k2Q2FYU+Gpt82BzcaxL9rCJDMvt9U5w6lUnnDlIkT3zkqPHR3OK1GdQulDjASHQpYtSccZK6cJZpDt9b5Hz/uCgOkAznQOIDblIgsaxekHX5unYME7/dkiDz9ob6Z5JkERF8B980UOC+XRzv62BVtiVQ+kG9axc5kik/aD3JElp6ndhmCJnKpD4aG+SXkX14vk376IIieARJkxiXPVTuQsvXqOGDDipEhr3VRDdsPmNsDdnBjlguoHbSg88Ro+Htrc7WwVk2kyQKApkQ0k9W0EEP1Rfmm+HBXaO+zXPHfRLIjJ5Jkohg6VMQGbS2eT75kRNBY75yt+4Ks1JWVnTJMS2MpIGH5occUksjc6ndSxJBZUkK+Y1xB3PpNGUraGYNlTRTVlXJUKXw3sBZhCTpm+/JtgBJk32CstlG5UwPEOZ/OJiyoktOYHgISb1vGdGXO1CJO1cmMQYUqSusSzWZf1GT0mq9pWDhvWccjnF31cXh+5Ssy9K+oZnEWJgkyvYkfQeZNIpHkvTbmTT5BDdZpR3l/yjLnWMMUg5JBBHQ201Lv3xKHXJ8jXXR/AdJItyRLRwcwXy6/9L0re430k13i2Qzr+kfyp2Q/twVGU7VWiZJdFNgmTupf5AjnSk459RZmCQTcHQnfWethH4H7XP+foCkQQsllr891HfOgndS0Gb8zHr1IjJcvuw0CvUWamIAXZIc3X4bFf3CKhyRwfQSDF5Grx20j8ryvbqng8BgZlZo42lckeqjY15TS6twThvqHnpVE2f4p8MX3G+97uYkSez5mle+EL1p5L52hw+HMJJ45CCvzrHs0HOI8KjXXYwni5ikCCAmKQKISYoAYpIigJikCCAm6ckD+AWvK+p4TZNhbAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="E - Write Cell" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="WriteCellX_3">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">Excel.Sheet["Plan1"].Cell["E2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">ValorTela</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="F - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Data Nascimento'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/22621cfa-e250-43bc-9999-80dc060b1e4d" DesignTimeRectangle="1466, 384, 188, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'19/07/1966'" FullSelectorArgument="&lt;webctrl id='id_data_nascimento' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='id_data_nascimento' tag='INPUT' type='text' class=' form-control input-sm input-mask  dateinput date-picker' aaname='              Data Nascimento                                            ' /&gt;" Guid="c0a5ac33-c5ea-460a-8145-219ca1f03d42" InformativeScreenshot="9b2c62fedfd9ade89ba65efa44a7bce2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1466, 360, 101, 19" ElementType="Text" FriendlyName="'Data Nascimento'" FullSelectorArgument="&lt;webctrl aaname='              Data Nascimento                                   *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Data Nascimento                                   *' parentid='pessoais' tag='LABEL' type='' class='control-label is-required' check:innerText='Data Nascimento' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="F - Write Cell" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="WriteCellX_4">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">Excel.Sheet["Plan1"].Cell["F2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">ValorTela</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="G - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="G - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_5">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">Excel.Sheet["Plan1"].Cell["G2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32" xml:space="preserve">((DateTime.ParseExact(ValorTela, "dd/MM/yyyy", null).Date &gt; DateTime.Today.AddYears(-(DateTime.Today.Year - DateTime.ParseExact(ValorTela, "dd/MM/yyyy", null).Year))) 
+? (DateTime.Today.Year - DateTime.ParseExact(ValorTela, "dd/MM/yyyy", null).Year) - 1 :
+(DateTime.Today.Year - DateTime.ParseExact(ValorTela, "dd/MM/yyyy", null).Year)).ToString()</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="Y - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Estado civil'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/0f2d44dd-0fec-4f42-84a5-dafb859e838f" DesignTimeRectangle="594, 460, 297, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Solteiro'" FullSelectorArgument="&lt;webctrl aaname='Solteiro' parentid='pessoais' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pessoais' tag='SPAN' type='' class='filter-option pull-left' /&gt;" Guid="394412df-a4de-4b2f-ae08-c12ebe24ac37" InformativeScreenshot="db3785505518c4e3434d618db5be76dc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="594, 430, 67, 19" ElementType="Text" FriendlyName="'Estado civil'" FullSelectorArgument="&lt;webctrl aaname='              Estado civil                                      *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Estado civil                                      *' parentid='pessoais' tag='LABEL' type='' class='control-label ' check:innerText='Estado civil' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Y - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_14">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">Excel.Sheet["Plan1"].Cell["Y2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">ValorTela</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="H - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Nacionalidade'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/56fcb699-3d57-474a-8aa6-aaec72708a42" DesignTimeRectangle="921, 460, 297, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Brasil'" FullSelectorArgument="&lt;webctrl aaname='Brasil' parentid='pessoais' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pessoais' tag='SPAN' type='' class='filter-option pull-left' /&gt;" Guid="a0101668-947d-4154-8638-b90084a9bce2" InformativeScreenshot="ebecb9adadeb3c3ccd7c4212c3530225.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="921, 430, 84, 19" ElementType="Text" FriendlyName="'Nacionalidade'" FullSelectorArgument="&lt;webctrl aaname='              Nacionalidade                                     *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Nacionalidade                                     *' parentid='pessoais' tag='LABEL' type='' class='control-label ' check:innerText='Nacionalidade' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="H - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_6">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_33">Excel.Sheet["Plan1"].Cell["H2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_34">ValorTela.Replace("-", "").Trim()</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="I - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Naturalidade'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_7" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/56fcb699-3d57-474a-8aa6-aaec72708a42" DesignTimeRectangle="1248, 454, 297, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT id_naturalidade'" FullSelectorArgument="&lt;webctrl id='id_naturalidade' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='id_naturalidade' tag='INPUT' type='text' class=' form-control input-sm input-mask ' aaname='              Naturalidade                                            ' /&gt;" Guid="93b20b25-19c7-49cc-88d1-904a591a7c28" InformativeScreenshot="36902021b1f76bef4ea544f6577cbdce.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1248, 430, 75, 19" ElementType="Text" FriendlyName="'Naturalidade'" FullSelectorArgument="&lt;webctrl aaname='              Naturalidade                                      *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Naturalidade                                      *' parentid='pessoais' tag='LABEL' type='' class='control-label ' check:innerText='Naturalidade' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="I - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_7">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_37">Excel.Sheet["Plan1"].Cell["I2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">ValorTela.Replace("-", "").Trim()</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="Q - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'UF'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/56fcb699-3d57-474a-8aa6-aaec72708a42" DesignTimeRectangle="1575, 460, 297, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'---------'" FullSelectorArgument="&lt;webctrl aaname='---------' css-selector='body&amp;gt;section&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span' parentid='pessoais' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='pessoais' tag='SPAN' class='filter-option pull-left' /&gt;" Guid="cc2a3b42-fb0c-4544-9701-0d45f0704627" InformativeScreenshot="00ea1d4ed13334164828ab00f053503c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1575, 430, 16, 19" ElementType="Text" FriendlyName="'UF'" FullSelectorArgument="&lt;webctrl aaname='              UF                                            ' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              UF                                            ' parentid='pessoais' tag='LABEL' type='' class='control-label ' check:innerText='UF' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Q - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_8">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_38">Excel.Sheet["Plan1"].Cell["Q2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">ValorTela.Replace("-", "").Trim()</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="AB - Sequence" sap:VirtualizedContainerService.HintSize="496,467" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Escolaridade'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/56fcb699-3d57-474a-8aa6-aaec72708a42" DesignTimeRectangle="594, 530, 297, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Ens. Fundamental'" FullSelectorArgument="&lt;webctrl aaname='Ens. Fundamental Incompleto' parentid='pessoais' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pessoais' tag='SPAN' type='' class='filter-option pull-left' /&gt;" Guid="f9d97d81-fbcc-47df-805b-efdf02b3a988" InformativeScreenshot="5aa5d30b18cb0147daa9c03a89e5ef52.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="594, 501, 76, 19" ElementType="Text" FriendlyName="'Escolaridade'" FullSelectorArgument="&lt;webctrl aaname='              Escolaridade                                      *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Escolaridade                                      *' parentid='pessoais' tag='LABEL' type='' class='control-label ' check:innerText='Escolaridade' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="Q - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_9">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">Excel.Sheet["Plan1"].Cell["AB2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_55">ValorTela.Replace("-", "").Replace("Ens. ", "Ensino ").Trim()</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="R - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Profissão'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/56fcb699-3d57-474a-8aa6-aaec72708a42" DesignTimeRectangle="921, 524, 297, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT id_profissao'" FullSelectorArgument="&lt;webctrl id='id_profissao' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='id_profissao' tag='INPUT' type='text' class=' form-control input-sm input-mask ' aaname='              Profissão                                            ' /&gt;" Guid="f5b7c7ef-816c-46e9-ba41-d2e764fc937a" InformativeScreenshot="45b5eec2da8c083077d9365f2af19294.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="921, 501, 56, 19" ElementType="Text" FriendlyName="'Profissão'" FullSelectorArgument="&lt;webctrl aaname='              Profissão                                         *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Profissão                                         *' parentid='pessoais' tag='LABEL' type='' class='control-label ' check:innerText='Profissão' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="R - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_10">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42">Excel.Sheet["Plan1"].Cell["R2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">ValorTela</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="V - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'CPF'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/56fcb699-3d57-474a-8aa6-aaec72708a42" DesignTimeRectangle="594, 594, 297, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT id_cpf'" FullSelectorArgument="&lt;webctrl id='id_cpf' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='id_cpf' tag='INPUT' type='text' class=' form-control input-sm input-mask  cpf' aaname='              CPF                                            ' /&gt;" Guid="570d1eeb-f1dd-48ab-a0d6-920faa276d79" InformativeScreenshot="60233ca53025b1e4e6557491ba909b83.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="594, 571, 24, 19" ElementType="Text" FriendlyName="'CPF'" FullSelectorArgument="&lt;webctrl aaname='              CPF                                            ' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              CPF                                            ' parentid='pessoais' tag='LABEL' type='' class='control-label ' check:innerText='CPF' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_13">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="V - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_11">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_44">Excel.Sheet["Plan1"].Cell["V2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">ValorTela</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="W - Sequence" sap:VirtualizedContainerService.HintSize="496,81" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Tipo documento'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/56fcb699-3d57-474a-8aa6-aaec72708a42" DesignTimeRectangle="921, 600, 297, 19" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'---------'" FullSelectorArgument="&lt;webctrl aaname='---------' css-selector='body&amp;gt;section&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button&amp;gt;span' idx='2' parentid='pessoais' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='filter-option pull-left' parentid='pessoais' tag='SPAN' /&gt;" Guid="10e3cfcc-2654-4ab4-b6df-750bc8a4e537" InformativeScreenshot="9481a09f9fe963ae4dc40fabc7f4557b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="921, 571, 95, 19" ElementType="Text" FriendlyName="'Tipo documento'" FullSelectorArgument="&lt;webctrl aaname='              Tipo documento                                    *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Tipo documento                                    *' parentid='pessoais' tag='LABEL' type='' class='control-label ' check:innerText='Tipo documento' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_14">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="R - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_12">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_46">Excel.Sheet["Plan1"].Cell["W2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">ValorTela.Replace("-", "").Trim()</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <Sequence DisplayName="X - Sequence" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NGetText DisplayName="Get Text 'Documento'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="a82beb64-1ba2-413a-a06d-9460cefd8c9b" Version="V3">
+                                <uix:NGetText.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://pae.wesleyana.com.br/membresia/membros/56fcb699-3d57-474a-8aa6-aaec72708a42" DesignTimeRectangle="1248, 594, 297, 30" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT id_documento'" FullSelectorArgument="&lt;webctrl id='id_documento' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='id_documento' tag='INPUT' type='text' class=' form-control input-sm input-mask ' aaname='              Documento                                            ' /&gt;" Guid="7a7351b0-9875-45f5-a36e-5433e82a75fc" InformativeScreenshot="ac35fbbccef34a28885f3af483dd5ad7.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='PAE 2022 - IMW CENTRO DO RIO' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="1248, 571, 68, 19" ElementType="Text" FriendlyName="'Documento'" FullSelectorArgument="&lt;webctrl aaname='              Documento                                         *' parentid='pessoais' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='              Documento                                         *' parentid='pessoais' tag='LABEL' type='' class='control-label ' check:innerText='Documento' /&gt;" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NGetText.Target>
+                                <uix:NGetText.TextString>
+                                  <OutArgument x:TypeArguments="x:String">
+                                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">ValorTela</CSharpReference>
+                                  </OutArgument>
+                                </uix:NGetText.TextString>
+                              </uix:NGetText>
+                              <ueab:WriteCellX AutoIncrementRow="True" DisplayName="X - Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_13">
+                                <ueab:WriteCellX.Cell>
+                                  <InArgument x:TypeArguments="ue:IReadWriteCellRef">
+                                    <CSharpValue x:TypeArguments="ue:IReadWriteCellRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_50">Excel.Sheet["Plan1"].Cell["X2"]</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Cell>
+                                <ueab:WriteCellX.Value>
+                                  <InArgument x:TypeArguments="x:Object">
+                                    <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_49">ValorTela</CSharpValue>
+                                  </InArgument>
+                                </ueab:WriteCellX.Value>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ueab:WriteCellX>
+                            </Sequence>
+                            <ueab:SaveExcelFileX DisplayName="Save Excel File" sap:VirtualizedContainerService.HintSize="450,85" sap2010:WorkflowViewState.IdRef="SaveExcelFileX_2">
+                              <ueab:SaveExcelFileX.Workbook>
+                                <InArgument x:TypeArguments="ue:IWorkbookQuickHandle">
+                                  <CSharpValue x:TypeArguments="ue:IWorkbookQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">Excel</CSharpValue>
+                                </InArgument>
+                              </ueab:SaveExcelFileX.Workbook>
+                            </ueab:SaveExcelFileX>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                      <ui:ForEachRow.DataTable>
+                        <InArgument x:TypeArguments="sd:DataTable">
+                          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">ExtractDataTable</CSharpValue>
+                        </InArgument>
+                      </ui:ForEachRow.DataTable>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHxSURBVDhPY8AHtKUKk7UlC3OgXOKAqUo5m55McaCuTHE6UPNmLYmCnVqShZlAOtxQoZQDqgw30Fas4lOXKmnQkiqaoylReFNTouAO0KDZQNwCNEAQqgw3uKmjKnZHR8XzubmWtKts+kQdqcK5doZNzFBpwuC2pmL+bS2lqbc1FLZfUVc6P1vDJfOytoYXUMwUqgQ/uK2tnAJUvAxowJT7mvK9N3TUEm5oq6TcVpffeUdfgw+qDDe4Y6AhBzRk5VUttcAildBkc5m8tj0ahuFAA9feNdMXgSrDD+5pK/ke1tCrVZUo3ussmzHvqq5Gyx199Yy7proSUCX4wX09Vc7r2qqZXeo+Gef09Arvainuua2n7g2VJg6UqoVL9Wn6RM1Xd2zdqWHk+0lfmh0qRRzQkSk20RAvvA3Ed7VkSo2hwsQDXekiRw2x/O9A/A3ItocK4wdWmtUsBvIl4sBkrA/MB3VAzX9AGMhuARkITOJaQHkBc7VKRqgWBgYT5XIWPdliFaCiNGB6Xw3El4D4HBBvAeaB6cAk3KgjXVQOxGVAQyqBhpfoy5ZEGimWaVhpVbMxGMiVhIA0aIrn/wDSu4BJNxZooJKZagVGxnEwqGcEauQwkC+VMlYq1wHy5UAu4AWanqAjVVQAlCSc0pBAlO9ERgD5w5YUtvtejwAAAABJRU5ErkJggg==" InformativeScreenshot="7b14f91676988921bbd3bb9ca41bb611.jpg" Selector="&lt;html app='chrome.exe' title='PAE 2022 - Login' /&gt;" Title="Novo separador" Url="https://pae.wesleyana.com.br/login/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
